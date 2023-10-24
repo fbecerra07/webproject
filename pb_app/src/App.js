@@ -16,10 +16,26 @@ export default function App() {
     );
   }
 
-  if (localStorage.getItem("currentPage") === "CreateAccount") {
+  else if (localStorage.getItem("currentPage") === "CreateAccount") {
     return (
       <>
         <CreateAccount />
+      </>
+    )
+  }
+
+  // else if (localStorage.getItem("currentPage") === "Home") {
+  //   return (
+  //     <>
+  //       <Home />
+  //     </>
+  //   )
+  // }
+
+  else if (localStorage.getItem("currentPage") === "CreatePost") {
+    return (
+      <>
+        <CreatePost />
       </>
     )
   }

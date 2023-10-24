@@ -17,12 +17,13 @@ li a {
     display: block;
     border-radius: none;
     text-align: center;
-    padding: 10px 20px;
+    padding: 12px 20px;
     background-color: #000000;
 }
 
 li a:hover {
-    color: red;
+    color: #ff00ff;
     background-color: none;
+    border-color: #ff00ff;
     cursor: pointer;
 }

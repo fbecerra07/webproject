@@ -1,4 +1,5 @@
 import NavBar from "NavBar";
+import Home from "Home";
 import useLogout from "hooks/useLogout";
 import useLogin from "hooks/useLogin";
 import pb from "lib/pocketbase";
@@ -19,8 +20,7 @@ export default function Login() {
     if (isLoggedIn) 
         return (
             <>
-                <h1>Logged In As: {isLoggedIn && pb.authStore.model.username}</h1>
-                <button onClick={logout}>Log Out</button>
+                <Home/>
             </>
         );
 
@@ -28,9 +28,6 @@ export default function Login() {
         <>
             <html>
             <head>
-                <meta charset="UTF-8"></meta>
-                <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
-                <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
                 <title>Login</title>
                 <link rel="stylesheet" href="login.css"></link>
             </head>
@@ -45,12 +42,12 @@ export default function Login() {
                             <div class="login-input-group">
                                 <div class="login-input-field">
                                     <label>Email or Username:</label><br/>
-                                    <input type="text" placeholder="email" {...register("email")} />
+                                    <input type="text" placeholder="Email/Username" {...register("email")} />
                                 </div>
 
                                 <div class="login-input-field">
                                     <label>Password:</label><br/>
-                                    <input type="password" placeholder="password" {...register("password")} />
+                                    <input type="password" placeholder="Password" {...register("password")} />
                                 </div>
                             </div>
 

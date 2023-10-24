@@ -4,20 +4,16 @@ import {useForm} from "react-hook-form";
 
 export default function CreateAccount() {
     const {mutate: createAcc, isLoading, isError} = useCreateAcc();
-    const {register, handleSubmit, reset} = useForm();
+    const {register, handleSubmit} = useForm();
 
     async function onSubmit(data) {
         createAcc({email: data.email, username: data.username, password: data.password, passwordConfirm: data.passwordConfirm});
-        // reset();
     }
 
     return (
         <>
             <html>
             <head>
-                <meta charset="UTF-8"></meta>
-                <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
-                <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
                 <title>Create Account</title>
                 <link rel="stylesheet" href="createAccount.css"></link>
             </head>
