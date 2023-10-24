@@ -1,5 +1,7 @@
 import Login from "Login";
 import CreateAccount from "CreateAccount";
+import Home from "Home";
+import CreatePost from "CreatePost";
 
 export default function App() {
   if (localStorage.getItem("currentPage") === null) {

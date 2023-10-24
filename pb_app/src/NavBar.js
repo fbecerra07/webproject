@@ -1,3 +1,5 @@
+import "stylesheets/navbar.css";
+
 export default function NavBar() {
     async function updatePage(page) {
         if (page === "CreateAccount") {
@@ -13,7 +15,7 @@ export default function NavBar() {
         <>
             <html lang="en">
                 <head>
-                    <link rel="stylesheet" href="navBar.css"></link>
+                    <link rel="stylesheet" href="navbar.css"></link>
                 </head>
                 <body>
                     <div className="navbar-container">

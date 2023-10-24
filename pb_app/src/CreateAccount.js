@@ -1,6 +1,5 @@
 import NavBar from "NavBar";
 import useCreateAcc from "hooks/useCreateAcc";
-import pb from "lib/pocketbase";
 import {useForm} from "react-hook-form";
 
 export default function CreateAccount() {
@@ -32,18 +31,22 @@ export default function CreateAccount() {
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <div class="createacc-input-group">
                                 <div class="createacc-input-field">
+                                    <label>Email:</label><br/>
                                     <input type="email" id="email" placeholder="example@domain.com" {...register("email")} />
                                 </div>
 
                                 <div class="createacc-input-field">
+                                    <label>Username:</label><br/>
                                     <input type="text" id="username" placeholder="Username" {...register("username")} />
                                 </div>
 
                                 <div class="createacc-input-field">
+                                    <label>Password:</label><br/>
                                     <input type="password" id="password" placeholder="Password" {...register("password")} />
                                 </div>
 
                                 <div class="createacc-input-field">
+                                    <label>Confirm Password:</label><br/>
                                     <input type="password" id="passwordConfirm" placeholder="Confirm Password" {...register("passwordConfirm")} />
                                 </div>
                             </div>

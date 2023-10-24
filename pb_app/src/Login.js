@@ -44,10 +44,12 @@ export default function Login() {
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <div class="login-input-group">
                                 <div class="login-input-field">
+                                    <label>Email or Username:</label><br/>
                                     <input type="text" placeholder="email" {...register("email")} />
                                 </div>
 
                                 <div class="login-input-field">
+                                    <label>Password:</label><br/>
                                     <input type="password" placeholder="password" {...register("password")} />
                                 </div>
                             </div>
